@@ -6,12 +6,52 @@
     --dark: #404A3D;
 }
 
+/* Font chữ hỗ trợ tiếng Việt */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.navbar-brand h1 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+}
+
 .back-to-top {
     position: fixed;
     display: none;
     right: 30px;
     bottom: 30px;
     z-index: 99;
+}
+
+.zalo-button {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    width: 56px;
+    height: 56px;
+    background: #0068FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 104, 255, 0.4);
+    z-index: 99;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.zalo-button:hover {
+    background: #0052CC;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 104, 255, 0.5);
+}
+
+.zalo-button i {
+    color: white;
+    font-size: 28px;
 }
 
 .fw-bold {
