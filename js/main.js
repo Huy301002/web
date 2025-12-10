@@ -26,16 +26,23 @@
     });
     
     
-    // Back to top button
-    $(window).scroll(function () {
+    // Back to top button - chỉ hiện khi cuộn xuống
+    $(window).on('scroll load', function () {
         if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
+            $('.back-to-top').show();
         } else {
-            $('.back-to-top').fadeOut('slow');
+            $('.back-to-top').hide();
+        }
+    });
+    
+    // Đảm bảo nút ẩn khi trang load lần đầu
+    $(document).ready(function() {
+        if ($(window).scrollTop() <= 300) {
+            $('.back-to-top').css('display', 'none').removeClass('show');
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({scrollTop: 0}, 600, 'swing');
         return false;
     });
 
